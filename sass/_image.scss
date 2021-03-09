@@ -1,0 +1,38 @@
+.box {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .box__item {
+        width: 30%;
+        margin: calc(10%/4);
+        @include sp {
+            width: 100%;
+        }
+        &:nth-child(3n) {
+            margin-right: 0;
+            @include sp {
+                margin: calc(10%/4);
+            }
+        }
+        &:nth-child(3n+1) {
+            margin-left: 0;
+            @include sp {
+                margin: calc(10%/4);
+            }
+        }
+        .box__text {
+            padding: 15px;
+            background-color: #efefef;
+            h2 {
+                font-size: 25px;
+                margin-bottom: 20px;
+            }
+            p {
+                font-size: 17px;
+                line-height: 1.5;
+            }
+        }
+    }
+}
